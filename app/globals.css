@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-muted: var(--muted);
+}
+
+:root {
+  --background: #ffffffc4;
+  --foreground: #0e1627;
+  --primary: #754b4d;
+  --muted: #0e162795;
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #f4e1e0;
+  --primary: #bd8e89;
+  --muted: #e5c5c1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: transparent;
+  color: var(--foreground);
+  font-family: "Fira Code", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.editorial-card {
+  position: relative;
+  border: 1px solid rgba(127, 127, 127, 0.22);
+  border-left: 3px solid var(--primary);
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 0.5rem;
+  transition: border-color 0.3s ease, transform 0.3s ease, background 0.3s ease;
+}
+
+.editorial-card:hover {
+  border-color: rgba(127, 127, 127, 0.4);
+  border-left-color: var(--primary);
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+.dark .editorial-card {
+  border-color: rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.dark .editorial-card:hover {
+  border-color: rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.07);
+}
