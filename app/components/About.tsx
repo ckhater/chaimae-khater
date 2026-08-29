@@ -54,14 +54,14 @@ export default function About() {
                 Who I am
               </p>
               <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted">
-              I'm a software engineer with a strong interest in both modern web development and low-level programming. I was certified as a junior developer at
+              I&apos;m a software engineer with a strong interest in both modern web development and low-level programming. I was certified as a junior developer at
               <strong className="text-foreground"> 1337 School</strong>, where I completed an intensive, project-based, peer-to-peer learning program.
               <br/>During my training, I worked on challenging projects covering<strong> software development</strong>,<strong> algorithms</strong>,
               <strong> C/C++</strong>,<strong> system programming</strong>, and <strong> object-oriented concepts</strong>. 
               This experience strengthened my problem-solving skills and taught me how to approach complex technical challenges from different perspectives.
               <br/>Beyond development, I enjoy continuously learning and challenging myself through <strong>Capture The Flag (CTF) competitions </strong>and personal projects. 
               Working in a peer-to-peer environment also taught me the importance of<strong> communication, collaboration, knowledge sharing, and independent problem-solving</strong>.
-              <br/>Today, I'm particularly interested in building <strong> clean, performant web applications </strong>while continuing to deepen my understanding 
+              <br/>Today, I&apos;m particularly interested in building <strong> clean, performant web applications </strong>while continuing to deepen my understanding 
               of<strong> software architecture,low-level programming, and how systems work under the hood</strong>.
               </p>
               <a

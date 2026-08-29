@@ -65,7 +65,7 @@ export default function Contact() {
       <Reveal>
         <SectionHeading
           title="Contact"
-          subtitle="I'm currently open to new opportunities. Whether you have a question or just want to say hi, my inbox is always open."
+          subtitle="I&apos;m currently open to new opportunities. Whether you have a question or just want to say hi, my inbox is always open."
         />
       </Reveal>
 
