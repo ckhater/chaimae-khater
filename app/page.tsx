@@ -8,7 +8,7 @@ import ScrollProgress from "@/app/components/ScrollProgress";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="overflow-hidden ">
       <ScrollProgress />
         <Navbar />
         <main>

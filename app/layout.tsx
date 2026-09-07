@@ -25,7 +25,7 @@ export default function RootLayout({
         <div className="fixed inset-0 -z-10 transform-gpu [backface-visibility:hidden] will-change-transform">
 <Grainient
                   timeSpeed={0.4}
-                  contrast={1}
+                  contrast={0.95}
                   grainAmount={0.02}
         
                   color1="#0e1627"
