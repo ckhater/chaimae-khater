@@ -25,10 +25,19 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+  background-color: #d8a694;
+}
+
+html.dark {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+  background-color: #d8a694;
 }
 
 body {
   background-color: transparent;
+  overscroll-behavior: none;
   color: var(--foreground);
   font-family: "Fira Code", ui-monospace, SFMono-Regular, Menlo, monospace;
 }

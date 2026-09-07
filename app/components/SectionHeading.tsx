@@ -13,7 +13,7 @@ export default function SectionHeading({
       >
         {title}
       </span>
-      <h3 className="relative text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+      <h3 className="relative text-xl font-bold tracking-tight text-foreground sm:text-4xl">
         {title}
       </h3>
       {subtitle && (

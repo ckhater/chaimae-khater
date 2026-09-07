@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Fira_Code } from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "@/app/components/theme-provider";
+import Grainient from "@/app/components/Grainient";
+
 
 const firacode = Fira_Code({ subsets: ["latin"] });
 
@@ -19,7 +21,21 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={firacode.className}>
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider >
+        <div className="fixed inset-0 -z-10 transform-gpu [backface-visibility:hidden] will-change-transform">
+<Grainient
+                  timeSpeed={0.4}
+                  contrast={1}
+                  grainAmount={0.02}
+        
+                  color1="#0e1627"
+                  color2="#d8a694"
+                  color3="#a86a65"
+                />
+            <div className="absolute inset-0 bg-background/45" />
+        </div>
+        {children}
+        </ThemeProvider>
       </body>
     </html>
   );

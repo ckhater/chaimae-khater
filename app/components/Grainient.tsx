@@ -104,8 +104,8 @@ void mainImage(out vec4 o, vec2 C){
   float blendX=(tuv*blendRot).x;
   float edge0=-0.3-b-s;
   float edge1=0.2-b+s;
-  float v0=0.5-b+s;
-  float v1=-0.3-b-s;
+  float v0=1.5-b+s;
+  float v1=-1.5-b-s;
   vec3 layer1=mix(colDark,colOrg,S(edge0,edge1,blendX));
   vec3 layer2=mix(colOrg,colLav,S(edge0,edge1,blendX));
   vec3 col=mix(layer1,layer2,S(v0,v1,tuv.y));
@@ -349,7 +349,7 @@ const Grainient: React.FC<GrainientProps> = ({
   return (
     <div
       ref={containerRef}
-      className={`relative h-full w-full overflow-hidden ${className}`.trim()}
+      className={`relative h-full w-full overflow-hidden transform-gpu [backface-visibility:hidden] will-change-transform ${className}`.trim()}
     />
   );
 };
