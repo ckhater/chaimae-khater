@@ -28,7 +28,7 @@ const contactLinks = [
 ];
 
 const inputClass =
-  "w-full rounded-md border border-foreground/15 bg-transparent px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted/60 focus:border-primary/60 focus:ring-2 focus:ring-primary/15";
+  "w-full rounded-md border border-foreground/15 bg-transparent px-4 py-3 text-base text-foreground outline-none transition-colors placeholder:text-muted/60 focus:border-primary/60 focus:ring-2 focus:ring-primary/15";
 
 export default function Contact() {
   const [form, setForm] = React.useState({

@@ -168,11 +168,13 @@ const Grainient: React.FC<GrainientProps> = ({
     const container = containerRef.current;
     if (!container) return;
 
+    const coarsePointer = window.matchMedia("(pointer: coarse)").matches;
+
     const renderer = new Renderer({
       webgl: 2,
       alpha: true,
       antialias: false,
-      dpr: Math.min(window.devicePixelRatio || 1, 2),
+      dpr: Math.min(window.devicePixelRatio || 1, coarsePointer ? 1.5 : 2),
     });
 
     const gl = renderer.gl;
@@ -218,8 +220,14 @@ const Grainient: React.FC<GrainientProps> = ({
 
     const setSize = () => {
       const rect = container.getBoundingClientRect();
+      const vv = window.visualViewport;
       const w = Math.max(1, Math.floor(rect.width));
-      const h = Math.max(1, Math.floor(rect.height));
+      const h = Math.max(
+        1,
+        Math.floor(
+          Math.max(rect.height, vv?.height ?? 0, window.innerHeight ?? 0)
+        )
+      );
       renderer.setSize(w, h);
       const res = (program.uniforms.iResolution as { value: Float32Array })
         .value;
@@ -230,6 +238,13 @@ const Grainient: React.FC<GrainientProps> = ({
 
     const ro = new ResizeObserver(setSize);
     ro.observe(container);
+
+    const vpResizeTarget = window.visualViewport ?? window;
+    const onViewportResize = () => setSize();
+    vpResizeTarget.addEventListener("resize", onViewportResize);
+    vpResizeTarget.addEventListener("scroll", onViewportResize, {
+      passive: true,
+    });
     setSize();
 
     let raf = 0;
@@ -282,6 +297,8 @@ const Grainient: React.FC<GrainientProps> = ({
       tryStop();
       ro.disconnect();
       io.disconnect();
+      vpResizeTarget.removeEventListener("resize", onViewportResize);
+      vpResizeTarget.removeEventListener("scroll", onViewportResize);
       document.removeEventListener("visibilitychange", onVisibility);
       ctxMap.delete(container);
       try {

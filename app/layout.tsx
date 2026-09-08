@@ -3,6 +3,7 @@ import { Fira_Code } from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "@/app/components/theme-provider";
 import Grainient from "@/app/components/Grainient";
+import Navbar from "@/app/components/Navbar";
 
 
 const firacode = Fira_Code({ subsets: ["latin"] });
@@ -21,8 +22,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={firacode.className}>
-        <ThemeProvider >
-        <div className="pointer-events-none fixed inset-0 min-h-full w-full">
+<ThemeProvider >
+        <div className="bg-fixed-cover">
 <Grainient
                   timeSpeed={0.4}
                   contrast={0.95}
@@ -34,7 +35,10 @@ export default function RootLayout({
                 />
             <div className="absolute inset-0 bg-background/45 dark:bg-background/65" />
         </div>
-        {children}
+        <div className="content">
+          <Navbar />
+          {children}
+        </div>
         </ThemeProvider>
       </body>
     </html>

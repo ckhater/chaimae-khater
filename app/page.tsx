@@ -10,7 +10,6 @@ export default function Home() {
   return (
     <div className="relative">
       <ScrollProgress />
-        <Navbar />
         <main>
           <Hero />
           <About />

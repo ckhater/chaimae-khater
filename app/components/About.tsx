@@ -99,7 +99,7 @@ export default function About() {
               </h4>
             </div>
             <ol className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-3">
-              {path.map((step,) => (
+              {path.map((step) => (
                 <li key={step.title} className="group relative">
                   <span className="mb-3 flex items-center gap-3 text-xs font-semibold uppercase tracking-widest text-primary">
                     {step.year}

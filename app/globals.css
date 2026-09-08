@@ -23,13 +23,37 @@
   --muted: #e5c5c1;
 }
 
+html {
+  scroll-behavior: smooth;
+  background-color: #d6bdb3;
+  -webkit-tap-highlight-color: transparent;
+}
 
+html.dark {
+  scroll-behavior: smooth;
+  background-color: #10161d;
+  -webkit-tap-highlight-color: transparent;
+}
 
 body {
   background-color: transparent;
   overscroll-behavior: none;
   color: var(--foreground);
   font-family: "Fira Code", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+.bg-fixed-cover {
+  position: fixed;
+  top: -100px;
+  right: 0;
+  bottom: -100px;
+  left: 0;
+  pointer-events: none;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
 }
 
 .editorial-card {
