@@ -23,17 +23,7 @@
   --muted: #e5c5c1;
 }
 
-html {
-  scroll-behavior: smooth;
-  background-color: #d1bcb5c8;
-  -webkit-tap-highlight-color: transparent;
-}
 
-html.dark {
-  scroll-behavior: smooth;
-  background-color: #d8a69456;
-  -webkit-tap-highlight-color: transparent;
-}
 
 body {
   background-color: transparent;
