@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center px-4 py-20 text-center sm:px-6"
+      className="flex h-screen flex-col items-center justify-center px-4 py-20 text-center sm:px-6"
     >
       <Reveal delay={0}>
         <p className="mb-4 text-sm font-bold">Hi, my name is</p>
@@ -54,7 +54,7 @@ export default function Hero() {
       <Reveal delay={500}>
         <a
           href="#projects"
-          className="mt-12 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+          className="mt-8 sm:mt-12 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90"
         >
           View my work
           <ArrowDown className="h-4 w-4" />
