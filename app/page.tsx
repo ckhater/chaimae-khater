@@ -1,14 +1,14 @@
-import Navbar from "@/app/components/Navbar";
 import Hero from "@/app/components/Hero";
 import About from "@/app/components/About";
 import Skills from "@/app/components/Skills";
 import Projects from "@/app/components/Projects";
 import Contact from "@/app/components/Contact";
 import ScrollProgress from "@/app/components/ScrollProgress";
+import Navbar from "@/app/components/Navbar";
 
 export default function Home() {
   return (
-    <div className="overflow-hidden ">
+    <div className="relative">
       <ScrollProgress />
         <Navbar />
         <main>

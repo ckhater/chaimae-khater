@@ -349,7 +349,7 @@ const Grainient: React.FC<GrainientProps> = ({
   return (
     <div
       ref={containerRef}
-      className={`relative h-full w-full overflow-hidden transform-gpu [backface-visibility:hidden] will-change-transform ${className}`.trim()}
+      className={`relative h-full w-full overflow-hidden ${className}`.trim()}
     />
   );
 };

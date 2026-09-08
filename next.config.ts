@@ -1,13 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "export",
-  basePath: "/chaimae-khater",
-  images: {
-    unoptimized: true,
-  },
+  // output: "export",
+  // basePath: "/chaimae-khater",
+  // images: {
+  //   unoptimized: true,
+  // },
 
-  // allowedDevOrigins:["192.168.*.*",],
+  allowedDevOrigins:["192.168.*.*",],
 
 };
 

@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={firacode.className}>
         <ThemeProvider >
-        <div className="fixed inset-0 -z-10 transform-gpu [backface-visibility:hidden] will-change-transform">
+        <div className="fixed inset-0">
 <Grainient
                   timeSpeed={0.4}
                   contrast={0.95}
@@ -32,7 +32,7 @@ export default function RootLayout({
                   color2="#d8a694"
                   color3="#a86a65"
                 />
-            <div className="absolute inset-0 bg-background/45" />
+            <div className="absolute inset-0 bg-background/45 dark:bg-background/65" />
         </div>
         {children}
         </ThemeProvider>
