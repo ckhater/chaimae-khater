@@ -33,7 +33,7 @@ export default function ScrollProgress() {
   }, []);
 
   return (
-    <div className="pointer-events-none fixed inset-x-0 top-0 z-[60] hidden h-[3px] md:block">
+    <div className="pointer-events-none fixed inset-x-0 top-0 z-[60] h-[3px]">
       <div
         ref={ref}
         className="h-full w-full origin-left bg-gradient-to-r from-primary/60 via-primary to-primary/60"

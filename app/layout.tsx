@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={firacode.className}>
         <ThemeProvider >
-        <div className="fixed inset-0">
+        <div className="pointer-events-none fixed inset-0 z-[-1] h-[100dvh] w-screen">
 <Grainient
                   timeSpeed={0.4}
                   contrast={0.95}
