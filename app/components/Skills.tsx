@@ -1,7 +1,6 @@
 import { Code2, Database,Container,Boxes, BrainCircuit,} from "lucide-react";
 import SectionHeading from "@/app/components/SectionHeading";
 import Reveal from "@/app/components/Reveal";
-import { title } from "process";
 
 const skills = [
   { icon: Code2, title: "Programmming Languages", items: ["c","c++"," TypeScript","JavaScript","SQL","Bash","HTML","CSS"] },
